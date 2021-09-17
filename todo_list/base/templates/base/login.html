@@ -1,6 +1,15 @@
-<h1>LogIn</h1>
-<form action="" method="POST">
-    {% csrf_token %}
-    {{form.as_p}}
-    <input type="submit" value="LogIn">
-</form>
+{% extends 'base/main.html' %}
+{% block content %}
+
+<div class="jumbotron">
+    <h1>LogIn</h1>
+    <form action="" method="POST">
+     {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="LogIn">
+    </form>
+
+    <p>Don't have an account? <a href="{% url 'register' %}">Register here</a></p>
+
+</div>
+{% endblock content %}
