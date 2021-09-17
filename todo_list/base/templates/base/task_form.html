@@ -1,13 +1,14 @@
 {% extends 'base/main.html' %}
 {% block content %}
 
-<h3>Task Form</h3>
-<a href="{% url 'tasks' %}">Go Back</a>
-<form action="" method="POST">
+
+<form class="form-group" action="" method="POST">
+    <h3 style="font-family: Baloo Bhai 2', cursive;">Task Form</h3>
+    <a class="btn btn-primary" href="{% url 'tasks' %}">Go Back</a>
     {% csrf_token %}
     {{form.as_p}}
     
-    <button type"submit">Submit</button>
+    <button class="btn btn-success btn-lg" type"submit">Submit</button>
 </form>
 
 {% endblock content %}
